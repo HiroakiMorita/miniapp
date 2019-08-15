@@ -1,0 +1,9 @@
+  <div class="contents row" >
+    <% @users.each do |user| %>
+      <div class="content_post" style="background-image: url(<%= user.image %>);">
+        <%= simple_format(user.text) %>
+        <span class="name"><%= user.name %></span>
+      </div>
+    <% end %>
+    <%= paginate(@users) %>
+  </div>

@@ -1,0 +1,20 @@
+  <%# <div class="contents row">
+    <%= form_tag("/users/#{@user.id}", method: :patch ) do %>
+      <%# <h3>
+        編集
+      </h3>
+      <textarea cols="80" name="text" placeholder="text" rows="20"><%= @user.text %></textarea>
+      <%# <input type="submit" value="SENT">
+    <% end %> 
+  <%# </div> %>
+
+  <%= form_for @user do |f| %>
+
+  <p>
+    <%= f.label :text, "編集欄" %><br>
+    <%= f.text_area :text %>
+  </p>
+  <p>
+    <%= f.submit "編集する"%>
+  </p>
+<% end %>
